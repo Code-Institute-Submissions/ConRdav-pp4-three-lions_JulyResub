@@ -89,7 +89,7 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 #### test_views.py
 ![testing views.py](assets/images/test_views.png)
 
-![Test result](assets/images/test_results.png)
+![Test result](assets/images/test_result.png)
 
 * I attempted to test models.py but didn't have a great understanding of what to test for so decided to continue with manual testing for the rest of my app.
 
