@@ -165,14 +165,22 @@ Deployment procedure (using Heroku):
 3. Navigate to the Resources tab. Using the Add Ons section, add ‘Heroku Postgres’ as the app’s database.
 4. Create an env.py file in your root directory and import the os library within this file.
 5. Within your env.py file, create environment variables for your DATABASE_URL and SECRET_KEY. They should appear as follows:
-*os.environ[“DATABASE_URL”] = “___”
-*os.environ[“SECRET_KEY”] = “___”
+
+	__*os.environ[“DATABASE_URL”] = “___”__
+
+	__*os.environ[“SECRET_KEY”] = “___”__
+
 6. Assign a value to your DATABASE_URL and SECRET_KEY and within the Heroku settings tab, create corresponding Config Variables.
 7. In your settings.py file, assign your Heroku app as a localhost in your ALLOWED_HOSTS variable, using the appropriate format:
-app_name.herokuapp.com
+
+	__app_name.herokuapp.com__
+
 8. After updating all of the necessary environment and configuration variables in the settings.py and env.py files, create a new file at the top level directory called ‘Procfile’. 
 9. Within Procfile, add the following code:
-web: guincorn PROJECT_NAME.wsgi
+
+
+	__web: guincorn PROJECT_NAME.wsgi__
+
 10. Using the Command Line interface: add, commit and push your files. 
 11. Finally, navigate to the Deployment tab in Heroku and deploy your branch manually, observing the build logs for errors.
 12. Heroku will build the app for you. If the build is successful, Heroku will provide a link to your live app.
