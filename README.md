@@ -125,25 +125,24 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 * test_views.py 
 
 ### HTML Validation with Official W3C Validator
-* base.html
-   
-* index.html
-
-* create_post.html
-
-* edit_posts.html
-
-* post_detail.html
-
-* user_posts.html
- 
-* customised version of django-all_auth's login.html
-
-* customised version of django-all_auth's logout.html
-
-
-* customised version of django-all_auth's signup.html
-
+## base.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## index.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## create_post.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## edit_posts.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## post_detail.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## user_posts.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## django-all_auth's login.html edited for uniformity
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## django-all_auth's logout.html edited for uniformity
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## django-all_auth's signup.html edited for uniformity
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 
 ## Bugs
 
