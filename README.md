@@ -155,15 +155,27 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 ## django-all_auth's signup.html edited for uniformity
 * Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 
+## LightHouse testing
+![lighthouse1](assets/images/light_house1.png)
+![lighthouse2](assets/images/light_house2.png)
+![lighthouse3](assets/images/light_house3.png)
+![lighthouse4](assets/images/light_house4.png)
+![lighthouse5](assets/images/light_house5.png)
+
+## Responsive testing
+This app has been tested on mobile and tablet devices and is responsive.
+![mobile1](assets/images/mobile_1.png)
+![mobile2](assets/images/mobile_2.png)
+![mobile3](assets/images/mobile_3.png)
+![mobile4](assets/images/mobile_4.png)
+![mobile5](assets/images/mobile_5.png)
+
 ## Bugs
+- During the final deployment, I encountered a ProgrammingError relating to data in my database model.
+	- To resolve this issue I leveraged the following stackoverflow thread: https://stackoverflow.com/questions/55117984/relation-does-not-exist-django-postgres.
 
 
-
-
-
-Existing bugs:
-
-
+## Existing Bugs
 
 ## Deployment
 
@@ -217,4 +229,8 @@ Deployment procedure (using Heroku):
 
 
 ## Credits
+- Code Institutes I Think Therefore I Blog was a guide to help set up the enviroment and the final deployment details. (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/)
+- Codemy youtube page was used for the create_post method. (https://www.youtube.com/watch?v=CnaB4Nb0-R8)
+- W3 Schools was used to help with bootstrap styling (https://www.w3schools.com/)
+- Django docs helped with Django testing (https://docs.djangoproject.com/en/4.0/topics/testing/)
 
