@@ -81,29 +81,31 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 * I used Django TestCase to test my forms.py, urls.py and views.py within test_forms.py, test_urls.py and test_views.py.
 
 #### test_forms.py
-![testing forms.py]()
+![testing forms.py](assets/images/test_forms.png)
 
 #### test_urls.py
-![testing urls.py]()
+![testing urls.py](assets/images/test_urls.png)
 
 #### test_views.py
-![testing views.py]()
+![testing views.py](assets/images/test_views.png)
+
+![Test result](assets/images/test_results.png)
 
 * I attempted to test models.py but didn't have a great understanding of what to test for so decided to continue with manual testing for the rest of my app.
 
 #### Django Coverage report
-![Coverage report]()
+![Coverage report](assets/images/coverage_report.png)
 * Using Django Coverage I realised that I hadn't covered enough testing with Django TestCase so manual testing was the next step to cover more testing.
 
 ### Manual Testing
 * I used a KanBan board to help plan my manual testing and the points I needed to hit. [Here](https://github.com/ConRdav/pp4-three-lions/projects/3)
-* Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. ![Post Model]().
+* Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. ![Post Model](assets/images/post_model.png).
 
-* Comment model comments being ordered by creation date, and commenter name was returned along with the comment. ![Comment Model]()
+* Comment model comments being ordered by creation date, and commenter name was returned along with the comment. ![Comment Model](assets/images/comment_model.png)
 
 * The paths from url.py that I didn't cover in my automated tested which were users_post, edit_post and delete_post. These links are working.
 
-* If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User]()
+* If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/view_post_non_user.png) ![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/index_page.png)
 
 * Logged in users can create, edit and delete their posts. Can comment and like on posts aswell as the ability to sign out.
 ![Logged in user]()
