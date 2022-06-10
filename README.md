@@ -50,22 +50,17 @@ I used GitHub's KanBan board to manage my workflow. [Three Lions Workflow](https
 
 ### Welcome to Three Lions
 Upon opening the app users are met with a page full of blog posts which even without an account they can view. 
-IMAGE
 The navbar for users without an account will have a sign up option allowing them to create their own account.
-IMAGE
 
 ### Create A Blog Post
 Once a user has their account set up they are then given more options on the navbar including 'create a post' and 'My posts'. 
-IMAGE
 
 ### View Your Own Posts
 When a user clicks on my posts they will have a similar screen as the home page but with only their posts on it and it will show if they have been approved by admin or if its pending.
-IMAGE
 
 
 ### Delete Your Post
 Users will need to confirm they wish to delete their post.
-IMAGE
 
 
 ### Edit Your Post
@@ -73,7 +68,8 @@ Similar to create your own post form users can alter their previous posts and re
 IMAGE
 
 ## Features left to implement
-
+- Login via social media account, eg. facebook or google.
+- Search bar to search for a particular blog or author.
 
 ## Testing
 
@@ -155,19 +151,30 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 ## django-all_auth's signup.html edited for uniformity
 * Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 
+### CSS Validation with Official W3C Validator
+![CSSVALIDATION](assets/images/css_validation.png)
+
 ## LightHouse testing
 ![lighthouse1](assets/images/light_house1.png)
+
 ![lighthouse2](assets/images/light_house2.png)
+
 ![lighthouse3](assets/images/light_house3.png)
+
 ![lighthouse4](assets/images/light_house4.png)
+
 ![lighthouse5](assets/images/light_house5.png)
 
 ## Responsive testing
 This app has been tested on mobile and tablet devices and is responsive.
 ![mobile1](assets/images/mobile_1.png)
+
 ![mobile2](assets/images/mobile_2.png)
+
 ![mobile3](assets/images/mobile_3.png)
+
 ![mobile4](assets/images/mobile_4.png)
+
 ![mobile5](assets/images/mobile_5.png)
 
 ## Bugs
@@ -176,6 +183,13 @@ This app has been tested on mobile and tablet devices and is responsive.
 
 
 ## Existing Bugs
+
+- Unable to collect static files - css file not found
+	- I have faced issues with managing my static files which has resulted in my Django Admin page rendering without css in Heroku.
+	- Locally, the Django admin renders as expected.
+	- I have leveraged the following link: https://django.readthedocs.io/en/2.2.x/howto/static-files to no avail. Given more time, I would aim to resolve this issue in order to make the admin page more accessible.
+
+- When the user makes a post, a success message is supposed to pop up. This feature currently does not work. However, the success message works when the user comments on a post. Given more time, I would aim to resolve this issue to improve feedback responsiveness for user interaction.
 
 ## Deployment
 
@@ -206,7 +220,8 @@ Deployment procedure (using Heroku):
 11. Finally, navigate to the Deployment tab in Heroku and deploy your branch manually, observing the build logs for errors.
 12. Heroku will build the app for you. If the build is successful, Heroku will provide a link to your live app.
 
-
+### Django AdminUser
+For this project the built in Django admin page is where the admin approves posts and comments so that they can be viewed on the post list.
 
 
 
