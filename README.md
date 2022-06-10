@@ -193,7 +193,8 @@ This app has been tested on mobile and tablet devices and is responsive.
 ## Existing Bugs
 
 - Unable to collect static files - css file not found
-	- I have faced issues with managing my static files which has resulted in my Django Admin page rendering without css in Heroku.
+	- I have faced issues with managing my static files.
+	- Following the final deployment, it was observed that this mismanagement of the static files resulted in my Django Admin page rendering without css in Heroku.
 	- Locally, the Django admin renders as expected.
 	- I have leveraged the following link: https://django.readthedocs.io/en/2.2.x/howto/static-files to no avail. Given more time, I would aim to resolve this issue in order to make the admin page more accessible.
 
