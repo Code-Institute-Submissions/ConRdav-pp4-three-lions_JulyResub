@@ -105,13 +105,13 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 
 * The paths from url.py that I didn't cover in my automated tested which were users_post, edit_post and delete_post. These links are working.
 
-* If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/view_post_non_user.png) ![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/index_page.png)
+* If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/view_post_non_user.png) ![Unregistered User](assets/images/sign_up.png) ![Unregistered User](assets/images/sign_in.png)
 
 * Logged in users can create, edit and delete their posts. Can comment and like on posts aswell as the ability to sign out.
-![Logged in user]()
+![Logged in user](assets/images/index_page_user.png) ![Logged in user](assets/images/user_posts.png) ![Logged in user](assets/images/create_post.png) ![Logged in user](assets/images/edit_post.png) ![Logged in user](assets/images/logout.png) 
 
 * Django Admin user can create, edit and delete posts from the Django admin panel, and can approve posts and comments from there too.
-![Django Admin]()
+![Django Admin](assets/images/admin_index.png) ![Django Admin](assets/images/admin_comments.png) ![Django Admin](assets/images/admin_posts.png) ![Django Admin](assets/images/admin_add_post.png) ![Django Admin](assets/images/admin_add_comment.png) 
 
 ### Pep8 and Pylint Python Validators
 * admin.py 
