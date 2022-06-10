@@ -81,35 +81,37 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 * I used Django TestCase to test my forms.py, urls.py and views.py within test_forms.py, test_urls.py and test_views.py.
 
 #### test_forms.py
-![testing forms.py]()
+![testing forms.py](assets/images/test_forms.png)
 
 #### test_urls.py
-![testing urls.py]()
+![testing urls.py](assets/images/test_urls.png)
 
 #### test_views.py
-![testing views.py]()
+![testing views.py](assets/images/test_views.png)
+
+![Test result](assets/images/test_result.png)
 
 * I attempted to test models.py but didn't have a great understanding of what to test for so decided to continue with manual testing for the rest of my app.
 
 #### Django Coverage report
-![Coverage report]()
+![Coverage report](assets/images/coverage_report.png)
 * Using Django Coverage I realised that I hadn't covered enough testing with Django TestCase so manual testing was the next step to cover more testing.
 
 ### Manual Testing
 * I used a KanBan board to help plan my manual testing and the points I needed to hit. [Here](https://github.com/ConRdav/pp4-three-lions/projects/3)
-* Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. ![Post Model]().
+* Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. ![Post Model](assets/images/post_model.png).
 
-* Comment model comments being ordered by creation date, and commenter name was returned along with the comment. ![Comment Model]()
+* Comment model comments being ordered by creation date, and commenter name was returned along with the comment. ![Comment Model](assets/images/comment_model.png)
 
 * The paths from url.py that I didn't cover in my automated tested which were users_post, edit_post and delete_post. These links are working.
 
-* If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User]()
+* If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/view_post_non_user.png) ![Unregistered User](assets/images/sign_up.png) ![Unregistered User](assets/images/sign_in.png)
 
 * Logged in users can create, edit and delete their posts. Can comment and like on posts aswell as the ability to sign out.
-![Logged in user]()
+![Logged in user](assets/images/index_page_user.png) ![Logged in user](assets/images/user_posts.png) ![Logged in user](assets/images/create_post.png) ![Logged in user](assets/images/edit_post.png) ![Logged in user](assets/images/logout.png) 
 
 * Django Admin user can create, edit and delete posts from the Django admin panel, and can approve posts and comments from there too.
-![Django Admin]()
+![Django Admin](assets/images/admin_index.png) ![Django Admin](assets/images/admin_comments.png) ![Django Admin](assets/images/admin_posts.png) ![Django Admin](assets/images/admin_add_post.png) ![Django Admin](assets/images/admin_add_comment.png) 
 
 ### Pep8 and Pylint Python Validators
 * admin.py 
@@ -123,25 +125,24 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 * test_views.py 
 
 ### HTML Validation with Official W3C Validator
-* base.html
-   
-* index.html
-
-* create_post.html
-
-* edit_posts.html
-
-* post_detail.html
-
-* user_posts.html
- 
-* customised version of django-all_auth's login.html
-
-* customised version of django-all_auth's logout.html
-
-
-* customised version of django-all_auth's signup.html
-
+## base.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## index.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## create_post.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## edit_posts.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## post_detail.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## user_posts.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## django-all_auth's login.html edited for uniformity
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## django-all_auth's logout.html edited for uniformity
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## django-all_auth's signup.html edited for uniformity
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 
 ## Bugs
 
