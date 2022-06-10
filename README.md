@@ -116,15 +116,24 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 ![Django Admin](assets/images/admin_index.png) ![Django Admin](assets/images/admin_comments.png) ![Django Admin](assets/images/admin_posts.png) ![Django Admin](assets/images/admin_add_post.png) ![Django Admin](assets/images/admin_add_comment.png) 
 
 ### Pep8 and Pylint Python Validators
-* admin.py 
+* admin.py
+![admin.py](assets/images/admin_py.png) 
 * apps.py
+![apps.py](assets/images/app_py.png) 
 * forms.py 
+![forms.py](assets/images/forms.png) 
 * models.py 
+![models.py](assets/images/models_py.png) 
 * urls.py
+![urls.py](assets/images/blog_url.png) 
 * views.py 
-* test_forms.py 
+![views.py](assets/images/views.png) 
+* test_forms.py
+![test_forms.py](assets/images/test_forms_pep8.png)
 * test_urls.py 
+![test_urls.py](assets/images/test_urls_pep8.png)
 * test_views.py 
+![test_views.py](assets/images/test_views_pep8.png)
 
 ### HTML Validation with Official W3C Validator
 ## base.html
