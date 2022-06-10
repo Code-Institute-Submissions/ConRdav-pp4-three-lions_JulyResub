@@ -46,26 +46,34 @@ The user stories for this project can be viewed [here](https://github.com/ConRda
 ## Project Management
 I used GitHub's KanBan board to manage my workflow. [Three Lions Workflow](https://github.com/ConRdav/pp4-three-lions/projects/2)
 
+I used KanBan because it offers a flexible and agile means of managing my workload. I find KanBan is especially effective for solo projects; it improved the efficiency of managing my workload through its accessible visualisation, and enhanced my productivity as a result.
+
+The board allowed me to easily drag my stories through the business delivery lifecycle of: To Do -> In Progress -> Completed.
+
 ## Features
 
 ### Welcome to Three Lions
-Upon opening the app users are met with a page full of blog posts which even without an account they can view. 
+Upon opening the app, users are met with a page full of blog posts which even without an account they can view. 
 The navbar for users without an account will have a sign up option allowing them to create their own account.
 
+### Create An Account
+Users have the ability to create a personal user account, thereby permitting them to create their own posts.
+
 ### Create A Blog Post
-Once a user has their account set up they are then given more options on the navbar including 'create a post' and 'My posts'. 
+Once a user has their account set up, they are then given more options on the navbar including 'Create a post' and 'My posts'. 
+
+When creating a post, the user is prompted to provide a unique title, a body of contents, and an excerpt to contextualise their post.
 
 ### View Your Own Posts
-When a user clicks on my posts they will have a similar screen as the home page but with only their posts on it and it will show if they have been approved by admin or if its pending.
-
+When a user clicks on 'My Posts', they will have a similar screen as the home page, yet filtered with only posts they have submitted, and it will show if the posts been approved by admin or if approval is pending.
 
 ### Delete Your Post
-Users will need to confirm they wish to delete their post.
-
+Users are able to manage their posted content. If the user wishes to remove and published posts, they can do so. In order to avoid accidental deletes, users will need to confirm they wish to delete their post before proceeding.
 
 ### Edit Your Post
-Similar to create your own post form users can alter their previous posts and resubmit them for approval.
-IMAGE
+Similarly to the 'Create Post' form, users can alter their previous posts and resubmit them for approval.
+
+**A detailed view of these features and their practical functionality is provided below in a sequence of images conducted during User Acceptance Testing.**
 
 ## Features left to implement
 - Login via social media account, eg. facebook or google.
@@ -89,7 +97,7 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 
 ![Test result](assets/images/test_result.png)
 
-* I attempted to test models.py but didn't have a great understanding of what to test for so decided to continue with manual testing for the rest of my app.
+* I attempted to test models.py but didn't have a great understanding of what to test for so decided to continue with manual testing for the rest of my application in order to verify quality and usability from the user's perspective.
 
 #### Django Coverage report
 ![Coverage report](assets/images/coverage_report.png)
