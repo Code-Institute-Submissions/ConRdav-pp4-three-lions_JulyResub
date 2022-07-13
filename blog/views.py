@@ -135,9 +135,9 @@ def edit_post(request, post_id):
         blog_form = BlogForm(request.POST, instance=post)
         if blog_form.is_valid():
             form = blog_form.save(commit=False)
-            form.approved = False
+            form.approved = True
             messages.success(
-                request, 'Updated post has been submitted for admin approval'
+                request, 'Your post has been updated!'
             )
             form.save()
             return redirect('user_posts')
@@ -150,5 +150,5 @@ def delete_post(request, post_id):
     """ authenticated users can delete their own posts """
     post = get_object_or_404(Post, id=post_id)
     post.delete()
-    messages.success(request, 'Post successfully deleted.')
+    messages.success(request, 'Your post has been deleted.')
     return redirect('user_posts')

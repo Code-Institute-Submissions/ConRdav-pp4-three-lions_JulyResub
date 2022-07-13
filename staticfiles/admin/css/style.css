@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #c9c8c8;
+    font-family: Lato, sans-serif;
+    min-height: 100vh;
+}
+
+.brand {
+    font-family: Lato, sans-serif;
+    font-size: xx-large;
+    font-weight: 700;
+    color: #4A4A4F;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
