@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
@@ -117,7 +117,13 @@ class CreatePost(View):
                 request, 'Your post has been submitted and awaiting approval.'
             )
             form.save()
-        return redirect('home')
+        return render(
+            request,
+            'create_post.html',
+            {
+                "posted": True,
+            },
+        )
 
 
 def user_posts(request):
@@ -136,11 +142,13 @@ def edit_post(request, post_id):
         if blog_form.is_valid():
             form = blog_form.save(commit=False)
             form.approved = True
-            messages.success(
-                request, 'Your post has been updated!'
-            )
             form.save()
-            return redirect('user_posts')
+            return render(
+                request,
+                'edit_posts.html',
+                {
+                    "updated": True,
+                })
     blog_form = BlogForm(instance=post)
     context = {'blog_form': blog_form}
     return render(request, 'edit_posts.html', context)
@@ -150,5 +158,9 @@ def delete_post(request, post_id):
     """ authenticated users can delete their own posts """
     post = get_object_or_404(Post, id=post_id)
     post.delete()
-    messages.success(request, 'Your post has been deleted.')
-    return redirect('user_posts')
+    return render(
+                request,
+                'user_posts.html',
+                {
+                    "removed": True,
+                })

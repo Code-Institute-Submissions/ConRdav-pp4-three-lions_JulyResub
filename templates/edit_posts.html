@@ -6,16 +6,17 @@
 
 <div class="container-fluid publish-form-container">
 
+    {% if updated %}
+    <div class="alert alert-success" role="alert">
+        Your post has been updated successfully!
+    </div>
+    {% else %}
     {% if user.is_authenticated %}
     <p>Editing as: {{ user.username }}</p>
     <form method="POST">
         {{ blog_form | crispy }}
         {% csrf_token %}
         <button type="submit" class="btn btn-signup btn-sm mt-2 mb-2 btn btn-primary">Update Blog</button>
-        {% if updated %}
-        <div class="alert alert-success" role="alert">
-            Your post has been updated and is awaiting approval.
-        </div>
     </form>
     {% endif %}
     {% endif %}
