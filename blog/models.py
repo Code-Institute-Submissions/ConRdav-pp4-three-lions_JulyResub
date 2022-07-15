@@ -55,3 +55,14 @@ class Comment(models.Model):
     def __str__(self):
         """ returns the comment and name of commenter"""
         return f"Comment {self.body} by {self.name}"
+
+    class Follow(models.Model):
+        """ model for following other users posts """
+        following = models.ForeignKey(
+            User, on_delete=models.CASCADE, related_name='following')
+        follower = models.ForeignKey(
+            User, on_delete=models.CASCADE, related_name='follower')
+
+        class Meta:
+            """ makes following and follower unique """
+            unique_together = (('following', 'follower'), )
