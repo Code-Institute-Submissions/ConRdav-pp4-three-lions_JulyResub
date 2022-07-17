@@ -56,13 +56,14 @@ class Comment(models.Model):
         """ returns the comment and name of commenter"""
         return f"Comment {self.body} by {self.name}"
 
-    class Follow(models.Model):
-        """ model for following other users posts """
-        following = models.ForeignKey(
-            User, on_delete=models.CASCADE, related_name='following')
-        follower = models.ForeignKey(
-            User, on_delete=models.CASCADE, related_name='follower')
 
-        class Meta:
-            """ makes following and follower unique """
-            unique_together = (('following', 'follower'), )
+class AuthorProfile(models.Model):
+    """ Model for user profiles """
+    author = models.ForeignKey(
+        User, primary_key=True, verbose_name='user',
+        related_name='profile', on_delete=models.CASCADE)
+    name = author
+    bio = models.TextField(max_length=500, blank=True)
+    location = models.CharField(max_length=100, blank=True, null=True)
+    followers = models.ManyToManyField(
+        User, blank=True, related_name='followers')
