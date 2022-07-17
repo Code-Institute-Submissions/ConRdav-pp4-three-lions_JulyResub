@@ -59,10 +59,9 @@ class Comment(models.Model):
 
 class AuthorProfile(models.Model):
     """ Model for user profiles """
-    author = models.ForeignKey(
+    user = models.ForeignKey(
         User, primary_key=True, verbose_name='user',
         related_name='profile', on_delete=models.CASCADE)
-    name = author
     bio = models.TextField(max_length=500, blank=True)
     location = models.CharField(max_length=100, blank=True, null=True)
     followers = models.ManyToManyField(

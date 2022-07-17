@@ -164,3 +164,16 @@ def delete_post(request, post_id):
                 {
                     "removed": True,
                 })
+
+
+class ProfileView(View):
+    def get(self, request, pk, *args, **kwargs):
+        profile = UserProfile.objects.get(pk=pk)
+        user = profile.user
+        posts = Post.objects.filter(author=user).order_by('-created_on')
+        context = {
+            'user': user,
+            'profile': profile,
+            'posts': posts,
+        }
+        return render(request, 'user_profile.html', context)
