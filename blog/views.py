@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib import messages
-from .models import Post
+from .models import Post, AuthorProfile
 from .forms import CommentForm, BlogForm
 
 
@@ -167,8 +167,10 @@ def delete_post(request, post_id):
 
 
 class ProfileView(View):
-    def get(self, request, pk, *args, **kwargs):
-        profile = UserProfile.objects.get(pk=pk)
+    """ Users can access their profile information """
+    def get(self, request, *args, **kwargs):
+        pk = self.kwargs.get('pk')
+        profile = AuthorProfile.objects.get(pk=pk)
         user = profile.user
         posts = Post.objects.filter(author=user).order_by('-created_on')
         context = {
