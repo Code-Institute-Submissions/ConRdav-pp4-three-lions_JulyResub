@@ -1,7 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.urls import reverse_lazy
 from django.views import generic, View
+from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
 from .models import Post, AuthorProfile
 from .forms import CommentForm, BlogForm
@@ -179,3 +182,17 @@ class ProfileView(View):
             'posts': posts,
         }
         return render(request, 'user_profile.html', context)
+
+
+class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = AuthorProfile
+    fields = ['user', 'bio', 'location']
+    template_name = 'user_profile_edit.html'
+    
+    def get_success_url(self):
+        pk = self.kwargs['pk']
+        return reverse_lazy('profile', kwargs={'pk': pk})
+    
+    def test_func(self):
+        profile = self.get_object()
+        return self.request.user == profile.user
