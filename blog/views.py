@@ -175,11 +175,9 @@ class ProfileView(View):
         pk = self.kwargs.get('pk')
         profile = AuthorProfile.objects.get(pk=pk)
         user = profile.user
-        posts = Post.objects.filter(author=user).order_by('-created_on')
         context = {
             'user': user,
             'profile': profile,
-            'posts': posts,
         }
         return render(request, 'user_profile.html', context)
 

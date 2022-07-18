@@ -3,8 +3,8 @@
 <div class="container">
     <div class="row justify-content-center mt-5">
         <div class="card col-md-8 col-sm-12 shadow-sm px-5 pt-3">
-                {% if profile.name %}
-                <h3 class="py-4">{{ profile.name }}
+                {% if profile.user %}
+                <h3 class="py-4">{{ profile.user }}
                 {% endif %}
             <div>
                 {% if profile.location %}
@@ -16,14 +16,5 @@
             </div>
         </div>
     </div>
-    {% for post in posts %}
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-8 col-sm-12 border-bottom position-relative">
-            <p><strong>{{ post.author }}</strong> {{ post.created_on }}</p>
-            <p>{{ post.body }}</p>
-            <a class="stretched-link" href="{% url 'post_detail.html' post.pk %}"></a>
-        </div>
-    </div>
-    {% endfor %}
 </div>
 {% endblock content %}
