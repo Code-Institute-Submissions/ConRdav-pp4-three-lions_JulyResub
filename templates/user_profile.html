@@ -14,6 +14,14 @@
                 <p>{{ profile.bio }}</p>
                 {% endif %}
             </div>
+            {% if profile.user %}
+                <h3 class="py-4">{{ profile.user }}
+                    <span>
+                        {% if request.user == user %}
+                        <a href="{% url 'user_profile_edit' profile.pk %}" style="color: #333;"><i class="far fa-edit"></i></a>
+                        {% endif %}
+                    </span></h3>
+                {% endif %}
         </div>
     </div>
 </div>
