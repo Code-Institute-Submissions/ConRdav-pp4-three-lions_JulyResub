@@ -4,24 +4,21 @@
     <div class="row justify-content-center mt-5">
         <div class="card col-md-8 col-sm-12 shadow-sm px-5 pt-3">
                 {% if profile.user %}
-                <h3 class="py-4">{{ profile.user }}
+                <h3 class="py-4 card-title text-uppercase">{{ profile.user }}</h3>
                 {% endif %}
             <div>
                 {% if profile.location %}
-                <p>{{ profile.location }}</p>
+                <h4 class="card-text py-4">Location: {{ profile.location }}</h4>
                 {% endif %}
                 {% if profile.bio %}
-                <p>{{ profile.bio }}</p>
+                <h4 class="card-text py-4">{{ profile.bio }}</h4>
                 {% endif %}
             </div>
-            {% if profile.user %}
-                <h3 class="py-4">{{ profile.user }}
-                    <span>
-                        {% if request.user == user %}
-                        <a href=" {% url 'user_profile_edit' profile.pk %} " style="color: #333;"><i class="far fa-edit"></i></a>
-                        {% endif %}
-                    </span></h3>
-                {% endif %}
+                <span class="py-4">
+                    {% if request.user == user %}
+                    <a href=" {% url 'user_profile_edit' profile.pk %} " style="color: #333;"><i class="far fa-edit"></i></a>
+                    {% endif %}
+                </span>
         </div>
     </div>
 </div>

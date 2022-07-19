@@ -10,6 +10,9 @@
     <div class="alert alert-success" role="alert">
         Your post has been published successfully!
     </div>
+    <div class="col-md-3 col-sm-6">
+        <a href="{% url 'user_posts' %}" class="btn btn-light">Back to Your Posts</a>
+    </div>
     {% else %}
     {% if user.is_authenticated %}
     <p>Posting as: {{ user.username }}</p>

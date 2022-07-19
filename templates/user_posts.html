@@ -3,11 +3,14 @@
 {% block content %}
 
 <div class="container-fluid ">
-    <h3 class="title mt-3 mx-auto">{{ user.username}}'s Posts:</h3>
+    <h3 class="title mt-3 mx-auto text-center">Posts</h3>
+    <div class="col-md-3 col-sm-6">
+        <a href="{% url 'create_post' %}" class="btn btn-success">Create A Post</a>
+    </div>
     <div class="row">
 
         {% for post in posts %}
-        <div class="card user_post_list mt-2 mb-2 border-dark col-md-8 mx-auto ">
+        <div class="card user_post_list mt-2 mb-2 border-dark col-md-8 mx-auto text-center ">
             {% if post.approved %}
             <h4 class="card-header status">Blog Post Approved</h4>
             {% else %}
@@ -51,27 +54,8 @@
                 </div>
             </div>
         </div>
-
-        <!-- Modal for deleted post confirmation message-->
-        <div class="modal fade" id="deleteModalDeleted" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content delete-modal">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Your post has been deleted.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {% empty %}
-        <p>You have no posts! Why don't you create one?</p>
-        <a class="btn btn-signup btn-lg profile-item-link" href="{% url 'create_post' %}">Create a post</a>
     {% endfor %}
+</div>
 </div>
 
 
