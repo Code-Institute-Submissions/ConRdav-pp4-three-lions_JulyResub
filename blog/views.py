@@ -186,11 +186,11 @@ class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = AuthorProfile
     fields = ['user', 'bio', 'location']
     template_name = 'user_profile_edit.html'
-    
+
     def get_success_url(self):
         pk = self.kwargs['pk']
         return reverse_lazy('user_profile.html', kwargs={'pk': pk})
-    
+
     def test_func(self):
         profile = self.get_object()
         return self.request.user == profile.user
