@@ -161,11 +161,13 @@ def delete_post(request, post_id):
     """ authenticated users can delete their own posts """
     post = get_object_or_404(Post, id=post_id)
     post.delete()
+    logged_in_user = request.user
+    logged_in_user_posts = Post.objects.filter(author=logged_in_user)
     return render(
                 request,
                 'user_posts.html',
                 {
-                    "removed": True,
+                    'posts': logged_in_user_posts
                 })
 
 
