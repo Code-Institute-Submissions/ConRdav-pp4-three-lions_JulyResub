@@ -12,7 +12,7 @@ The blog provides functionality that allows the user to create a personal user a
 	- Update posts - either their own, using the edit post option, or others’, by commenting and/or liking their posts.
 	- Delete posts (only those which they have created themselves).
 
-Additionally, users are given the option to edit and maintain their profile, which gives a brief introduction to any readers.
+Additionally, users are given the option to edit and maintain their profile, which gives a brief introduction to any readers about the author whose profile they are viewing. The existing implementation of the user profile currently displays the user's name, location, and a brief biography.
 
 When users decide to create a post, they are prompted to provide a unique title of their choosing, their post content, and an excerpt to contextualise their post.
 
@@ -41,6 +41,9 @@ The main goal for this project was to create a simple, user-friendly application
 
 5. Admin access to all forum content, controlling what is posted and the ability to delete content after publication.
 	- Admin access allows content to be monitored, promoting a positive and safe environment.
+
+6. Edit their user profile.
+	- The ability to edit and maintain a user profile allows the user to express their identity online and give additional context to posts.
 
 
 The user stories for this project can be viewed [here](https://github.com/ConRdav/pp4-three-lions/projects/1)
