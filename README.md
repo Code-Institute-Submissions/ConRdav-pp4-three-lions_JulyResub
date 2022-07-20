@@ -14,7 +14,7 @@ The blog provides functionality that allows the user to create a personal user a
 
 When users decide to create a post, they are prompted to provide a unique title of their choosing, their post content, and an excerpt to contextualise their post.
 
-Once the post has been created, it will be sent for approval by the admin so as to prevent any unsuitable content being published on the forum. Once the posts have been approved, the user will be able to see them on the main post list page. Whilst the post is awaiting approval the user will be made aware by a message in their personal post page.
+Once the post has been created, it will published on the forum. Once the post is published, the user will be able to see them on the main post list page. From there the user will be able to edit and delete their posts.
 
 Three Lions is a Django framework app. The user's post data is stored in a database with PostgreSql, and the app is hosted on Heroku. The Django administration site was utilised to provide admin control in order to monitor forum content, as well as super user control of CRUD operations - including the ability to delete other users’ posts and comments.
 
@@ -53,7 +53,7 @@ The board allowed me to easily drag my stories through the business delivery lif
 ## Features
 
 ### Welcome to Three Lions
-Upon opening the app, users are met with a page full of blog posts which even without an account they can view. 
+Upon opening the app, users are met with a landing page full of blog posts which even without an account they can view. 
 The navbar for users without an account will have a sign up option allowing them to create their own account.
 
 ### Create An Account
