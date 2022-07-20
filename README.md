@@ -78,6 +78,9 @@ Users are able to manage their posted content. If the user wishes to remove and 
 ### Edit Your Post
 Similarly to the 'Create Post' form, users can alter their previous posts and resubmit them for approval.
 
+### Edit Your Profile
+Users are able to edit and maintain their own user profile, which consists of their name, location and a brief biography.
+
 **A detailed view of these features and their practical functionality is provided below in a sequence of images conducted during User Acceptance Testing.**
 
 ## Features left to implement
