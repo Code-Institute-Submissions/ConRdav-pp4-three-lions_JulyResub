@@ -3,7 +3,7 @@ Live deployment for the app here https://pp4-three-lions.herokuapp.com/
 
 ## About
 
-The main objective of the Three Lions blog is to provide a user-friendly platform for people to discuss the England National Football team and their progress at the World Cup in 2022. The target end user is anyone and everyone who is interested in football, and who has a desire to follow and discuss the progress of England’s progress at the World Cup.
+The main objective of the Three Lions blog is to provide a user-friendly platform for people to discuss the England National Football team and their progress at the World Cup in 2022. The target end user is anyone and everyone who is interested in football, and who has a desire to follow and discuss England’s progress at the World Cup.
 
 The blog provides functionality that allows the user to create a personal user account. This access thereby permits the user to interact with the forum platform and take part in discussions. End users are able to: 
 
@@ -11,6 +11,8 @@ The blog provides functionality that allows the user to create a personal user a
 	- Read posts.
 	- Update posts - either their own, using the edit post option, or others’, by commenting and/or liking their posts.
 	- Delete posts (only those which they have created themselves).
+
+Additionally, users are given the option to edit and maintain their profile, which gives a brief introduction to any readers.
 
 When users decide to create a post, they are prompted to provide a unique title of their choosing, their post content, and an excerpt to contextualise their post.
 
@@ -188,7 +190,19 @@ This app has been tested on mobile and tablet devices and is responsive.
 ## Bugs
 - During the final deployment, I encountered a ProgrammingError relating to data in my database model.
 	- To resolve this issue I leveraged the following stackoverflow thread: https://stackoverflow.com/questions/55117984/relation-does-not-exist-django-postgres.
+	
+- When the user creates a post, a success message is supposed to be displayed. Initially, this was not working as expected, and instead no success message was being displayed and the application re-directed to the dashboard.
+	- To resolve this issue, I refactored the code so that the user was not re-directed to the dashboard after the post was successfully created. Instead, the edit page was re-rendered with the success message visible, mirroring the implementation of the user comment action elsewhere in the application, which was successfully working. 
+	
+- When the user deletes a post, the 'My Posts' page should be reloaded with any remaining posts the user has published. However, I encountered an issue whereby even if the user did in fact have posts remaining post-deletion, the page was refreshed with no posts. 
+	- To resolve this issue, I had to refactor the view, delete_post(). Initially, the page was re-rendered without passing in the post content to the render() method. In turn, I referred to the user_posts() view in order to initialise and pass in the logged_in_user_posts as a parameter, which would display any remaining active user posts.
+	
+- During development I encountered an issue with the user_posts() view form, whereby the get function was failing due to an error with input parameters not matching any data in the model.
+	- I resolved this issue by clearing the cache, and therefore clearing any stagnant form data. 
 
+- During the final deployment, I encountered a FileNotFoundError relating to the whitenoise module. 
+	- I had imported the whitenoise module in order to try and resolve the bug reported below in the 'Existing Bugs' section, whereby I am unable to collect static files successfully.
+	- In order to resolve the issue, I reverted my settings.py and wsgi.py files to their last working state - which is when I made my previous final deployment.
 
 ## Existing Bugs
 
@@ -197,8 +211,6 @@ This app has been tested on mobile and tablet devices and is responsive.
 	- Following the final deployment, it was observed that this mismanagement of the static files resulted in my Django Admin page rendering without css in Heroku.
 	- Locally, the Django admin renders as expected.
 	- I have leveraged the following link: https://django.readthedocs.io/en/2.2.x/howto/static-files to no avail. Given more time, I would aim to resolve this issue in order to make the admin page more accessible.
-
-- When the user makes a post, a success message is supposed to pop up. This feature currently does not work. However, the success message works when the user comments on a post. Given more time, I would aim to resolve this issue to improve feedback responsiveness for user interaction.
 
 ## Deployment
 
