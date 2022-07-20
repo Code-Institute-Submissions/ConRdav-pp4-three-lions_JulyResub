@@ -1,1 +1,3 @@
-web: gunicorn threelions.wsgi
+web: gunicorn threelions.wsgi --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
