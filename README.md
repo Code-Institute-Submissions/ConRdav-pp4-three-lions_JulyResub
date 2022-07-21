@@ -48,6 +48,17 @@ The main goal for this project was to create a simple, user-friendly application
 
 The user stories for this project can be viewed [here](https://github.com/ConRdav/pp4-three-lions/projects/1)
 
+### Models
+
+I used three models for this project. They are the Post model, which manages users posts, the comment model managing user comments and the Author Profile model which manages the user profile.
+
+![Post Model](assets/images/post_model.png)
+
+![Comment Model](assets/images/comment_model.png)
+
+![Author Profile Model](assets/images/profile_model.png)
+
+
 ## Project Management
 I used GitHub's KanBan board to manage my workflow. [Three Lions Workflow](https://github.com/ConRdav/pp4-three-lions/projects/2)
 
@@ -61,31 +72,53 @@ The board allowed me to easily drag my stories through the business delivery lif
 Upon opening the app, users are met with a landing page full of blog posts which even without an account they can view. 
 The navbar for users without an account will have a sign up option allowing them to create their own account.
 
+![Index Page](assets/images/index_page.png)
+
+The landing page for users with an account will show a navbar with the options to create a post, view the user posts and view user profile.
+
+![User Index Page](assets/images/index_page_user.png)
+
 ### Create An Account
-Users have the ability to create a personal user account, thereby permitting them to create their own posts.
+Users have the ability to create a personal user account, thereby permitting them to create their own posts. 
+
+![Sign Up Page](assets/images/sign_up.png)
 
 ### Create A Blog Post
 Once a user has their account set up, they are then given more options on the navbar including 'Create a post' and 'My posts'. 
 
 When creating a post, the user is prompted to provide a unique title, a body of contents, and an excerpt to contextualise their post.
 
+![Create Post](assets/images/create_post.png)
+
 ### View Your Own Posts
-When a user clicks on 'My Posts', they will have a similar screen as the home page, yet filtered with only posts they have submitted, and it will show if the posts been approved by admin or if approval is pending.
+When a user clicks on 'My Posts', they will have a similar screen as the home page, yet filtered with only posts they have created. Here the users will be able to manage their own posts, edit their content or if they wish to delete them entirely.
+
+![User Posts](assets/images/user_posts.png)
 
 ### Delete Your Post
 Users are able to manage their posted content. If the user wishes to remove and published posts, they can do so. In order to avoid accidental deletes, users will need to confirm they wish to delete their post before proceeding.
 
+![Delete Posts](assets/images/delete_post.png)
+
 ### Edit Your Post
-Similarly to the 'Create Post' form, users can alter their previous posts and resubmit them for approval.
+Similarly to the 'Create Post' form, users can alter their previous posts.
+
+![Edit posts](assets/images/edit_post.png)
+
+### Create Your Profile
+Users are able to create their profile as soon as they have signed up, clicking on the My Profile tab will take them to their profile and clicking the edit symbol at the bottom of the profile card will enable them to enter their profile details.
+
+![Profile Page](assets/images/user_profile.png)
 
 ### Edit Your Profile
 Users are able to edit and maintain their own user profile, which consists of their name, location and a brief biography.
 
-**A detailed view of these features and their practical functionality is provided below in a sequence of images conducted during User Acceptance Testing.**
+![Edit Profile Page](assets/images/edit_profile.png)
 
 ## Features left to implement
 - Login via social media account, eg. facebook or google.
 - Search bar to search for a particular blog or author.
+- Ability to view other posters profiles.
 
 ## Testing
 
@@ -113,9 +146,12 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 
 ### Manual Testing
 * I used a KanBan board to help plan my manual testing and the points I needed to hit. [Here](https://github.com/ConRdav/pp4-three-lions/projects/3)
-* Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. ![Post Model](assets/images/post_model.png).
 
-* Comment model comments being ordered by creation date, and commenter name was returned along with the comment. ![Comment Model](assets/images/comment_model.png)
+* Post Model blog posts were ordered by creation date, the blog title is returned and that the like count is returned. 
+
+* Comment model comments being ordered by creation date, and commenter name was returned along with the comment. 
+
+* Author model 
 
 * The paths from url.py that I didn't cover in my automated tested which were users_post, edit_post and delete_post. These links are working.
 
@@ -124,7 +160,7 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 * Logged in users can create, edit and delete their posts. Can comment and like on posts aswell as the ability to sign out.
 ![Logged in user](assets/images/index_page_user.png) ![Logged in user](assets/images/user_posts.png) ![Logged in user](assets/images/create_post.png) ![Logged in user](assets/images/edit_post.png) ![Logged in user](assets/images/logout.png) 
 
-* Django Admin user can create, edit and delete posts from the Django admin panel, and can approve posts and comments from there too.
+* Django Admin user can create, edit and delete posts from the Django admin panel, and can approve posts and comments from there too. This gives the admin the ability to moderate the posts on the blog.
 ![Django Admin](assets/images/admin_index.png) ![Django Admin](assets/images/admin_comments.png) ![Django Admin](assets/images/admin_posts.png) ![Django Admin](assets/images/admin_add_post.png) ![Django Admin](assets/images/admin_add_comment.png) 
 
 ### Pep8 and Pylint Python Validators
@@ -275,4 +311,6 @@ For this project the built in Django admin page is where the admin approves post
 - Codemy youtube page was used for the create_post method. (https://www.youtube.com/watch?v=CnaB4Nb0-R8)
 - W3 Schools was used to help with bootstrap styling (https://www.w3schools.com/)
 - Django docs helped with Django testing (https://docs.djangoproject.com/en/4.0/topics/testing/)
+- Legion Script's 'Building a Social Media Site' was used as to help set up views for the user profile page 
+(https://legionscript.medium.com building-a-social-media-site-with-python-and-django-part-1-landing-page-and-user-authentication-65ad4f45e441)
 
