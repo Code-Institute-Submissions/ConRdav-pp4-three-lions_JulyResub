@@ -151,9 +151,9 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 
 * Comment model comments being ordered by creation date, and commenter name was returned along with the comment. 
 
-* Author model 
+* For the Author Profile model the user, the bio and location is returned.
 
-* The paths from url.py that I didn't cover in my automated tested which were users_post, edit_post and delete_post. These links are working.
+* The paths from url.py that I didn't cover in my automated tested which were users_post, edit_post and delete_post, user_profile and user_profile edit are all working.
 
 * If the user isn't logged in they can't create,edit or delete a post and the user can't comment or like a post. The user can view a post and signup or login.![Unregistered User](assets/images/index_page.png) ![Unregistered User](assets/images/view_post_non_user.png) ![Unregistered User](assets/images/sign_up.png) ![Unregistered User](assets/images/sign_in.png)
 
@@ -195,6 +195,10 @@ I used Django to run automated testing however, sqlite3 was used as a local data
 ## post_detail.html
 * Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## user_posts.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## user_profile.html
+* Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
+## user_profile_edit.html
 * Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
 ## django-all_auth's login.html edited for uniformity
 * Offical W3C Validator picked up errors for using {{ }} and {% %} syntax, this are used for Django functionality
