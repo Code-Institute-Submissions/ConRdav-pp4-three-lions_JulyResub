@@ -115,6 +115,12 @@ Users are able to edit and maintain their own user profile, which consists of th
 
 ![Edit Profile Page](assets/images/edit_profile.png)
 
+### Commenting on Posts
+Users are able to comment on posts they view, however these posts then have to be approved by the admin before they can be seen. This is to prevent a toxic social site.
+
+### Blog Admin
+The blog admin is the django superuser for the site. They can flag posts and switch the approved status to FALSE which will remove it from the blog site, this is a way of moderating the site. They also have to approve comments for the same reason.
+
 ## Features left to implement
 - Login via social media account, eg. facebook or google.
 - Search bar to search for a particular blog or author.
@@ -249,6 +255,11 @@ This app has been tested on mobile and tablet devices and is responsive.
 - During the final deployment, I encountered a FileNotFoundError relating to the whitenoise module. 
 	- I had imported the whitenoise module in order to try and resolve the bug reported below in the 'Existing Bugs' section, whereby I am unable to collect static files successfully.
 	- In order to resolve the issue, I reverted my settings.py and wsgi.py files to their last working state - which is when I made my previous final deployment.
+
+- During manual testing I encountered an issue with the delete post action, whereby after deleting a post, when trying to delete any further posts immediately after, the action would fail.
+	- I referred to Google Chrome Dev Tools in order to validate the url path for the delete action, and discovered that the path was being appended incorrectly following the re-rendering of the page after the initial delete.
+	- To resolve this issue I leveraged the following stack overflow link: https://stackoverflow.com/questions/59945042/django-urls-are-appending-to-one-another.
+	- As detailed in the above link, I had to correctly define the url path in my html that handled the 'Delete Post' button action. Initially the url path was "delete/{{post.id}}", which led to the path being appended. I updated the path to "/delete/{{post.id}}" in order to solve the issue.
 
 ## Existing Bugs
 
